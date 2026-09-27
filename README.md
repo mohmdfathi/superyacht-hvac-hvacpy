@@ -1,4 +1,5 @@
 # superyacht-hvac-hvacpy
+
 Concept-level HVAC sizing for a synthetic superyacht accommodation zone, implemented in Python with [`hvacpy`](https://pypi.org/project/hvacpy/), an ASHRAE-based open-source HVAC calculation package.
 
 ![Superyacht accommodation zone deck plans and HVAC zones](superyacht.png)
@@ -9,14 +10,14 @@ Covers CLTD/CLF peak zone cooling loads, psychrometric fresh-air AHU sizing, FCU
 
 | Quantity | Value |
 |---|---|
-| Peak zone cooling load | 23.2 kW (16:00, SHR 0.84) |
-| Fresh-air AHU duty | 24.7 kW (0.48 m³/s, 48 occupants) |
-| Combined plant load | 47.3 kW (SHR 0.56) |
-| Chiller plant | 3 × 26.0 kW, N+1, COP 5.5 |
-| Condenser heat rejection | 55.9 kW |
-| Main duct | 400 mm dia., 3.8 m/s, 0.42 Pa/m |
-| Winter heating load | 7.6 kW |
-| Supplier-proposal check | 2 of 3 requirements met (fresh-air flow undersized) |
+| Peak zone cooling load | 17.8 kW (14:00) |
+| Fresh-air AHU duty | 19.5 kW (0.38 m³/s, 32 occupants) |
+| Combined plant load | 36.9 kW |
+| Chiller plant | 3 × 20.3 kW, N+1, COP 5.5 |
+| Condenser heat rejection | 43.6 kW |
+| Main duct | 350 mm dia., 3.9 m/s, 0.52 Pa/m |
+| Winter heating load | 5.8 kW |
+| Supplier-proposal check | 3 of 3 requirements met |
 
 ## Contents
 
@@ -25,5 +26,4 @@ Covers CLTD/CLF peak zone cooling loads, psychrometric fresh-air AHU sizing, FCU
 
 ## Scope
 
-All geometry, loads, and equipment figures are synthetic inputs for a portfolio exercise, not a real yacht design. 
- 
+All geometry, loads, and equipment figures are synthetic inputs for a portfolio exercise, not a real yacht design. The deck plan above illustrates the same eight spaces modeled in the notebook (Main Salon, Owner's Suite, four Guest Cabins, Bridge, Crew Mess).
