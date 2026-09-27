@@ -2,7 +2,7 @@
 
 Concept-level HVAC sizing for a synthetic superyacht accommodation zone, implemented in Python with [`hvacpy`](https://pypi.org/project/hvacpy/), an ASHRAE-based open-source HVAC calculation package.
 
-![Superyacht accommodation zone deck plans and HVAC zones](superyacht.png)
+![Superyacht accommodation zone deck plans and HVAC zones](super-yacht.png)
 
 Covers CLTD/CLF peak zone cooling loads, psychrometric fresh-air AHU sizing, FCU selection per room, chilled-water plant sizing with N+1 redundancy, concept duct sizing, a winter heating check, and an independent supplier-proposal verification.
 
