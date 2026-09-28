@@ -18,20 +18,16 @@ Every section of this notebook is a different piece of that same question: how m
 
 It's tempting to think the hottest moment in a room is simply *"whenever the sun is strongest."* But that's not how heat actually moves through a building - or a hull.
 
-**Analogy:** think of a stone patio on a summer day. The patio doesn't feel hottest at noon, when the sun is directly overhead - it feels hottest in the late afternoon or evening, because the stone has been *absorbing and storing* heat all day and only releases it gradually. A thin sheet of aluminum foil, by contrast, heats up and cools down almost instantly with the sun.
-
 Walls, furniture, and structure behave the same way - some store heat and release it hours later, others respond almost immediately. The **CLTD/CLF method** (Cooling Load Temperature Difference / Cooling Load Factor) is essentially a lookup-table way of encoding this time-lag behavior, so that the "peak load" used to size equipment reflects *when the space is actually hottest*, not just when the sun happens to be strongest. That's why this notebook reports a specific **peak cooling hour** rather than just a single load number - the hour matters as much as the value.
 
 ---
 
 ## 3. Humidity is a second, hidden load
 
-Air conditioning does two jobs at once, and people usually only think about one of them:
+Air conditioning does two jobs at once:
 
 1. **Sensible cooling** - lowering the air's temperature (what a thermometer measures).
 2. **Latent cooling** - removing moisture from the air (what makes air feel "sticky" even at a mild temperature).
-
-**Analogy:** a cold glass of lemonade on a humid day doesn't just feel cold - it "sweats," because the surrounding warm, humid air is dumping moisture onto anything cold enough to condense it. An air-conditioning coil does the same thing on purpose: as it cools air below its dew point, water condenses out of it (this shows up in the notebook as the **AHU condensate** figure). Removing that moisture costs real cooling capacity - you can't just cool the air, you also have to squeeze the water out of it.
 
 This is why the notebook keeps the **fresh-air AHU** (which has to fight hot, humid outdoor air - the harder job) separate from the **local fan-coil units** serving each space (which mostly recirculate already-dry indoor air - the easier job). Lumping the two together would both oversize the FCUs and undersize the part of the system actually struggling with humidity.
 
@@ -40,8 +36,6 @@ This is why the notebook keeps the **fresh-air AHU** (which has to fight hot, hu
 ## 4. From room load to hardware: FCUs and chilled water
 
 Once a room's peak load (in kW) is known, that number has to become something a piece of equipment can actually deliver. A **fan-coil unit (FCU)** does this by blowing room air across a coil of cold water - the colder the water and the more of it flows through, the more heat the coil can absorb.
-
-**Analogy:** it's the same principle as a car radiator, just running in reverse - instead of hot coolant giving up heat to air rushing past it, cold water is *absorbing* heat from air blown past it.
 
 The chilled water's flow rate is calculated so that the temperature rise of the water (its "return minus supply," here 12 °C − 6 °C = 6 K) times its flow rate matches the required cooling duty - the same logic as figuring out how fast you need to refill a bucket with a small leak to keep the water level steady.
 
@@ -52,8 +46,6 @@ The chilled water's flow rate is calculated so that the temperature rise of the 
 The **chiller plant** is where all those individual room and AHU loads get added up and turned into a decision: how many chillers, and how big each one should be.
 
 The critical design choice here is **N+1 redundancy**. Sizing three chillers to *exactly* split the peak load evenly is fragile - if just one unit trips offline (for maintenance, a fault, anything), the remaining two can't cover the full load, and the whole vessel starts overheating at the worst possible time.
-
-**Analogy:** it's the same reasoning as carrying a spare tire in a car. You don't size your four tires so that losing any one of them leaves you stranded - you carry a fifth, so a single failure is an inconvenience, not a crisis. N+1 does exactly that for cooling capacity: size the plant so that **any one chiller can fail and the remaining units still cover the full peak load.**
 
 The **COP** used here (electrical input vs. cooling output) is the same yardstick used to judge a heat pump's performance elsewhere - a higher COP means the same cooling output for less electrical power, which matters directly for a vessel's total energy budget.
 
