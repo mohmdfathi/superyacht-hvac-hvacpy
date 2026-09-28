@@ -69,7 +69,7 @@ The same room geometry that drove the summer cooling calculation is reused for t
 
 The final and, arguably, most important piece of this notebook isn't a calculation at all - it's a comparison. A supplier's proposal is only useful once it's checked against an independent, first-principles requirement.
 
-**Analogy:** a vendor's datasheet is a claim, not a fact - the same way you wouldn't buy a car based only on the brochure's fuel-economy number without checking it against your own driving. This notebook's final check simply asks, for each key requirement (fresh-air flow, AHU cooling duty, N+1 chiller capacity): *does the proposed equipment actually meet or exceed what the independent calculation says is needed?* That one habit - verify before you trust the paperwork - is the difference between reviewing a proposal and just rubber-stamping it.
+This notebook's final check simply asks, for each key requirement (fresh-air flow, AHU cooling duty, N+1 chiller capacity): *does the proposed equipment actually meet or exceed what the independent calculation says is needed?*.
 
 ---
 
