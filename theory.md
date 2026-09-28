@@ -1,6 +1,6 @@
 # Theory Notes - Superyacht HVAC Concept Sizing
 
-*A plain-language walkthrough of the engineering logic behind this notebook, written so a reviewer with a general engineering background - not necessarily an HVAC specialist - can follow the reasoning end to end.*
+*A plain-language walkthrough of the engineering logic behind this notebook, written so a reviewer with a general engineering background can follow the reasoning end to end.*
 
 ---
 
